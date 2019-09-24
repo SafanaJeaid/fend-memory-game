@@ -1,0 +1,171 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FBF8F5;
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background: #FF756B;
+    padding: 32px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #414042;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 1px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #2398AB;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #45D09E;
+    font-size: 33px;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+
+/*Syles for the modal*/
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.box {
+    position: fixed;
+    background-color: #fff;
+    width: 500px;
+    text-align: center;
+    top:30%;
+    left: 30%;
+    padding: 40px;
+}
+
+.play-again {
+    width: 100px;
+    height: 30px;
+    background-color: #008CBA;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+/*media Queries at 490px, 900px*/
+@media screen and (max-width: 490px) {
+    .score-panel {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .deck {
+        width: 95%;
+        padding: 3%;
+        margin: 0 auto;
+        min-height: 100%;
+    }
+    .deck .card {
+        width: 70px;
+        height: 90px;
+        margin-top: 2%;
+    }
+    .box {
+        width: 90%;
+        left: 5%;
+        top: 25%;
+        margin: auto 0;
+    }
+}
+
+@media screen and (min-width: 491px) and (max-width: 900px) {
+    .score-panel {
+        margin-bottom: 20px;
+    }
+    .box {
+        width: 70%;
+        left: 15%;
+        top: 30;
+    }
+}
