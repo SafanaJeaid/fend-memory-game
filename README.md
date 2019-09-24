@@ -1,5 +1,6 @@
 # Memory Game
 This is the second project for the front-end development Nanodegree by Udacity.
+You can play the game here: https://safanajeaid.github.io/fend-memory-game/.
 
 # How the game works:
 - You start by clicking two cards, the cards will be shown and their icons will be displayed.
